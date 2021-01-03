@@ -301,7 +301,7 @@ encoder_t amfenc {
     {
       { "header_insertion_mode"s, "idr"s },
       { "gops_per_idr"s, 30 },
-      { "rc"s, "cqp"s },
+      { "rc"s, &config::video.amf.rc },
       { "qp"s, "23"s},
       { "usage"s, "ultralowlatency"s },
       { "quality"s, &config::video.amf.quality },
@@ -316,7 +316,7 @@ encoder_t amfenc {
     {
       { "usage"s, "ultralowlatency"s },
       { "quality"s,  &config::video.amf.quality  },
-      { "rc"s, "cqp"s },
+      { "rc"s, &config::video.amf.rc },
       { "qp"s, "23"s},
       { "level"s, "4.1"s },
       { "b:v", &config::video.amf.maxrate },
@@ -692,9 +692,9 @@ std::optional<session_t> make_session(const encoder_t &encoder, const config_t &
   if(config.bitrate > 500) {
     auto bitrate = config.bitrate * 1000;
     ctx->rc_max_rate = bitrate;
-    ctx->rc_buffer_size = bitrate / config.framerate;
+    ctx->rc_buffer_size = bitrate * 2;
     ctx->bit_rate = bitrate;
-    ctx->rc_min_rate = bitrate;
+    ctx->rc_min_rate = bitrate / 2;
   }
   else if(video_format.crf && config::video.crf != 0) {
     handle_option(*video_format.crf);
