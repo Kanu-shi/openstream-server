@@ -24,7 +24,7 @@ void ConfigurationManager::reloadInMemoryValues() {
             auto key_val = line.split("=");
             entries.insert(key_val.first().trimmed(), key_val.last().trimmed());
             qDebug() << "Entrie added" << key_val.first().trimmed() << "="
-                                           <<  key_val.last().trimmed() << endl;
+                                           <<  key_val.last().trimmed() << Qt::endl;
         }
     }
     inputFile.close();
@@ -53,17 +53,17 @@ void ConfigurationManager::saveConfiguration()
     for(i = entries.begin(); i != entries.end(); i++)
     {
         QString line = i.key() + "=" + i.value();
-        outStream << line << endl;
+        outStream << line << Qt::endl;
     }
     outputConf.close();
-    qDebug() << "Configuration saved" << endl;
+    qDebug() << "Configuration saved" << Qt::endl;
 }
 
 void ConfigurationManager::setEntry(QString entry, QString value)
 {
     this->entries.insert(entry, value);
     qDebug () << "[ConfigurationManager] configuration key updated: "
-              << entry << "->" << value << endl;
+              << entry << "->" << value << Qt::endl;
 }
 
 void ConfigurationManager::removeEntry(QString entry) {

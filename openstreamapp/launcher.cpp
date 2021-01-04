@@ -3,7 +3,7 @@
 Launcher::Launcher(QWidget *parent)
     : QWidget(parent)
 {
-    qDebug() << DEBUGFLAG << "Running at: " << qApp->applicationDirPath() << endl;
+    qDebug() << DEBUGFLAG << "Running at: " << qApp->applicationDirPath() << Qt::endl;
     allocateSharedMemoryFootprint();
     createMainGroupBox();
     configDialog->setGUIPriority();
@@ -127,12 +127,12 @@ void Launcher::startSunshine()
             appRunning();
             break;
         default:
-            qDebug() << "Unknown host state" << endl;
+            qDebug() << "Unknown host state" << Qt::endl;
     }
 }
 
 void Launcher::appStart() {
-    qDebug() << "Start application" << endl;
+    qDebug() << "Start application" << Qt::endl;
     QString app_dir = QCoreApplication::applicationDirPath();
     connect(proc, &QProcess::readyReadStandardOutput, this, &Launcher::updateAppConsole);
     connect(proc, &QProcess::readyRead, this, &Launcher::updateAppConsole);
@@ -144,17 +144,17 @@ void Launcher::appStart() {
     proc->open(QProcess::Unbuffered);
     proc->start(app_dir + "/openstreamhost/openstreamhost.exe", QStringList() << *SUNSHINE_CONF);
     this->set_on_host_state_indicator();
-    qDebug() << "Application started" << endl;
+    qDebug() << "Application started" << Qt::endl;
 }
 
 void Launcher::appStarting() {
-    qDebug() << "A sunshine host is currently starting" << endl;
+    qDebug() << "A sunshine host is currently starting" << Qt::endl;
     QMessageBox::information(this, "Sunshine Launcher",
                              tr("A sunshine host is currently starting"));
 }
 
 void Launcher::appRunning() {
-    qDebug() << "A sunshine host was already started" << endl;
+    qDebug() << "A sunshine host was already started" << Qt::endl;
     QMessageBox::information(this, "Sunshine Launcher",
                              tr("A sunshine host was already started"));
 }
@@ -176,7 +176,7 @@ void Launcher::updateAppConsoleError()
 }
 
 void Launcher::appStoppedWatch() {
-    qDebug() << "Streamming host was stopped" << endl;
+    qDebug() << "Streamming host was stopped" << Qt::endl;
 }
 
 void Launcher::stopHostBeforeClose() {
@@ -193,7 +193,7 @@ void Launcher::stopSunshine()
         //Allocate new process
         delete proc;
         allocateNewProcess();
-        qDebug() << "Process host stopped " << pid << endl;
+        qDebug() << "Process host stopped " << pid << Qt::endl;
     }
     else {
         qDebug() << "Process currently stopped.";
@@ -286,24 +286,24 @@ void Launcher::allocateSharedMemoryFootprint() {
     sharedMemoryFootprint = new QSharedMemory(sharedMemoryFootprintKey, this);
     bool semaphore = sharedMemoryFootprint->create(4);
     if(semaphore) {
-        qDebug() << "Starting new application. Not previous footprint found." << endl;
+        qDebug() << "Starting new application. Not previous footprint found." << Qt::endl;
     }
     else {
         switch(sharedMemoryFootprint->error())
         {
             case QSharedMemory::InvalidSize:
-                qDebug() << "Invalid footprint size" << endl;
+                qDebug() << "Invalid footprint size" << Qt::endl;
                 break;
            case QSharedMemory::QSharedMemory::KeyError:
-                qDebug() << "Invalid footprint key" << endl;
+                qDebug() << "Invalid footprint key" << Qt::endl;
                 break;
            case QSharedMemory::AlreadyExists:
                 qDebug() << "An instance of Sunshine Launcher is already running."
-                         << "Closing current instance." << endl;
+                         << "Closing current instance." << Qt::endl;
                 sharedMemoryFootprintErrorMessage();
                 break;
            default:
-                qDebug() << "Unknown error found creating shared memory footprint" << endl;
+                qDebug() << "Unknown error found creating shared memory footprint" << Qt::endl;
         }
 
     }
@@ -324,13 +324,13 @@ void Launcher::resourcesStartup()
     QFile exeInputFile(":/sunshine-windows/sunshine.exe" );
     if(!exeInputFile.open(QFile::ReadOnly))
     {
-         qDebug() << "Could not open sunshine.exe in resources for read" << endl;
+         qDebug() << "Could not open sunshine.exe in resources for read" << Qt::endl;
          return;
     }
     QFile exeOutFile(QString("sunshine.exe"));
     if(exeOutFile.exists())
     {
-        qDebug() << "Sunshine.exe already found on folder" << endl;
+        qDebug() << "Sunshine.exe already found on folder" << Qt::endl;
     }
     else {
         QDataStream in(&exeInputFile);
@@ -351,7 +351,7 @@ void Launcher::resourcesStartup()
         copyStaticFile(QString(":sunshine-windows/assets/sunshine.conf"), QString("assets/sunshine.conf"));
         copyStaticFile(QString(":sunshine-windows/assets/apps_windows.json"), QString("assets/apps_windows.json"));
     }
-    qDebug() << DEBUGFLAG << "resouces copied successfuly" << endl;
+    qDebug() << DEBUGFLAG << "resouces copied successfuly" << Qt::endl;
 }
 
 
@@ -367,7 +367,7 @@ void Launcher::copyStaticFile(QString resourceName, QString filename)
         while(!in.atEnd())
         {
             QString line = in.readLine();
-            out << line << endl;
+            out << line << Qt::endl;
         }
     }
     inputFile.close();

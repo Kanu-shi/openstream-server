@@ -190,7 +190,7 @@ void ConfigurationDialog::editConfigurationClicked()
 
 void ConfigurationDialog::updateNewConfiguration()
 {
-    qDebug() << "Update new configuration" << endl;
+    qDebug() << "Update new configuration" << Qt::endl;
 
     /********Software encoder speed****/
     if(encswSpeedFastRadioBtn->isChecked())

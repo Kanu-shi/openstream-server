@@ -84,9 +84,9 @@ void h264AMDAMFConfigurationDialog::setLoadedValues() {
         ui->h264_amd_amf_rate_control_combobox->setCurrentIndex(2);
         entries_snapshot.insert("amf_rc", ENCODER_RATE_CONTROL_VBR_PEAK);
     }
-    else if(config->getKey("amf_rc") == ENCODER_RATE_CONTROL_VBR_LATENCY) {
+    else if(config->getKey("amf_rc") == ENCODER_RATE_CONTROL_VBV_LATENCY) {
         ui->h264_amd_amf_rate_control_combobox->setCurrentIndex(3);
-        entries_snapshot.insert("amf_rc", ENCODER_RATE_CONTROL_VBR_LATENCY);
+        entries_snapshot.insert("amf_rc", ENCODER_RATE_CONTROL_VBV_LATENCY);
     }
 
 

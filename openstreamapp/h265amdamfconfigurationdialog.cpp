@@ -41,7 +41,7 @@ h265AMDAMFConfigurationDialog::h265AMDAMFConfigurationDialog(QWidget *parent) :
     /*Initialize ui element values*/
     ui->h265_amd_amf_quality_combobox->addItems(ENCODER_QUALITY_OPT_LIST);
 
-    ui->h265_amd_amf_rate_control_combobox->addItem(ENCODER_RATE_CONTROL_VBR_PEAK);
+    ui->h265_amd_amf_rate_control_combobox->addItems(ENCODER_RATE_CONTROL_OPT_LIST);
 
     ui->h265_amd_amf_max_bitrate_combobox->addItems(ENCODER_MAXRATE_OPT_LIST);
 
@@ -74,8 +74,22 @@ void h265AMDAMFConfigurationDialog::setLoadedValues() {
         entries_snapshot.insert("amf_quality", ENCODER_QUALITY_QUALITY);
     }
 
-    ui->h265_amd_amf_rate_control_combobox->setCurrentIndex(0);
-    entries_snapshot.insert("amf_rc", ENCODER_RATE_CONTROL_VBR_PEAK);
+    if(config->getKey("amf_rc") == ENCODER_RATE_CONTROL_CQP) {
+        ui->h265_amd_amf_rate_control_combobox->setCurrentIndex(0);
+        entries_snapshot.insert("amf_rc", ENCODER_RATE_CONTROL_CQP);
+    }
+    else if(config->getKey("amf_rc") == ENCODER_RATE_CONTROL_CBR) {
+        ui->h265_amd_amf_rate_control_combobox->setCurrentIndex(1);
+        entries_snapshot.insert("amf_rc", ENCODER_RATE_CONTROL_CBR);
+    }
+    else if(config->getKey("amf_rc") == ENCODER_RATE_CONTROL_VBR_PEAK) {
+        ui->h265_amd_amf_rate_control_combobox->setCurrentIndex(2);
+        entries_snapshot.insert("amf_rc", ENCODER_RATE_CONTROL_VBR_PEAK);
+    }
+    else if(config->getKey("amf_rc") == ENCODER_RATE_CONTROL_VBV_LATENCY) {
+        ui->h265_amd_amf_rate_control_combobox->setCurrentIndex(3);
+        entries_snapshot.insert("amf_rc", ENCODER_RATE_CONTROL_VBV_LATENCY);
+    }
 
 
     if(config->getKey("amf_maxrate") == ENCODER_MAXRATE_5) {
