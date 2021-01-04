@@ -68,7 +68,9 @@ add_executable(openstreamapp
   openstreamapp/h265amdamfconfigurationdialog.ui
   openstreamapp/VideoEncoderEnum.h
   openstreamapp.qrc
-)
+  qt5app.rc
+  )
+
 
 target_link_libraries(openstreamapp PRIVATE Qt5::Widgets Qt5::Network ${OPENSTREAM_EXTERNAL_LIBRARIES})
 ADD_CUSTOM_COMMAND (TARGET openstreamapp POST_BUILD
@@ -102,4 +104,5 @@ set(QT5_WINDEPLOYQT_EXECUTABLE "${QT5_WINDEPLOYQT_EXECUTABLE}/windeployqt.exe")
 
 add_custom_command(TARGET openstreamapp POST_BUILD
    COMMAND ${QT5_WINDEPLOYQT_EXECUTABLE} --qmldir ${CMAKE_SOURCE_DIR} $<TARGET_FILE_DIR:openstreamapp>)
+
 

@@ -182,7 +182,7 @@ void move_mouse(input_t &input, int deltaX, int deltaY) {
 }
 
 void button_mouse(input_t &input, int button, bool release) {
-  constexpr SHORT KEY_STATE_DOWN = 0x8000;
+  constexpr INT KEY_STATE_DOWN = 0x8000;
 
   INPUT i {};
 

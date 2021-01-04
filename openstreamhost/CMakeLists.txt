@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 2.8)
+cmake_minimum_required(VERSION 3.5)
 
 project(OpenStreamHost)
 
@@ -9,6 +9,7 @@ add_subdirectory(moonlight-common-c/enet)
 
 find_package(Threads REQUIRED)
 find_package(OpenSSL REQUIRED)
+find_package(Qt5 COMPONENTS Widgets Network REQUIRED)
 
 ########### FFMPEG #################
 # We link against our build of FFmpeg with nvenc support enabled compilation

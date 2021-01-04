@@ -6,9 +6,21 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>857</width>
+    <height>427</height>
    </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>857</width>
+    <height>427</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>857</width>
+    <height>427</height>
+   </size>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
@@ -59,38 +71,64 @@ border-color: rgb(204, 197, 185);
       </property>
       <layout class="QVBoxLayout" name="verticalLayout">
        <item>
-        <widget class="QLabel" name="sidebar_title_label">
+        <widget class="QLabel" name="label">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
-           <horstretch>10</horstretch>
+          <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+           <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
          </property>
-         <property name="styleSheet">
-          <string notr="true">color: rgb(255, 255, 255);
-font: &quot;Open Sans Semibold&quot;;
-font-size: 26px;</string>
-         </property>
          <property name="text">
-          <string>Openstream</string>
+          <string/>
          </property>
-         <property name="alignment">
-          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+         <property name="pixmap">
+          <pixmap resource="../openstreamapp.qrc">:/images/OPENSTREAM-LOGO-1-200x48.png</pixmap>
+         </property>
+         <property name="scaledContents">
+          <bool>false</bool>
          </property>
         </widget>
        </item>
        <item>
-        <spacer name="verticalSpacer_3">
+        <widget class="QLabel" name="label_6">
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; color:#ffff7f;&quot;&gt;Open-Stream is a one-stop-shop application&lt;br/&gt;for connecting devices to cloud computing &lt;br/&gt;services. Easily customizable, and ready to&lt;br/&gt;connect. Just download, install, and with a &lt;br/&gt;few clicks you’re ready to go.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_8">
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;Featuring:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_9">
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;Support for up-to 120fps*&lt;br/&gt;Support for resolutions up-to 4K&lt;br/&gt;Use Moonlight or Sunlight as a Client App&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="verticalSpacer_2">
          <property name="orientation">
           <enum>Qt::Vertical</enum>
          </property>
          <property name="sizeType">
-          <enum>QSizePolicy::Minimum</enum>
+          <enum>QSizePolicy::Expanding</enum>
          </property>
          <property name="sizeHint" stdset="0">
           <size>
            <width>20</width>
-           <height>40</height>
+           <height>296</height>
           </size>
          </property>
         </spacer>
@@ -192,23 +230,13 @@ font-size: 26px;</string>
           <iconset resource="../openstreamapp.qrc">
            <normaloff>:/images/configure-ic.png</normaloff>:/images/configure-ic.png</iconset>
          </property>
-        </widget>
-       </item>
-       <item>
-        <spacer name="verticalSpacer_2">
-         <property name="orientation">
-          <enum>Qt::Vertical</enum>
-         </property>
-         <property name="sizeType">
-          <enum>QSizePolicy::Expanding</enum>
-         </property>
-         <property name="sizeHint" stdset="0">
+         <property name="iconSize">
           <size>
            <width>20</width>
-           <height>296</height>
+           <height>20</height>
           </size>
          </property>
-        </spacer>
+        </widget>
        </item>
       </layout>
      </widget>
@@ -442,63 +470,61 @@ font-size: 20px;</string>
         </item>
         <item>
          <layout class="QGridLayout" name="gridLayout">
-          <item row="0" column="2">
-           <widget class="QFrame" name="frame_3">
+          <item row="0" column="0">
+           <widget class="QLabel" name="label_3">
+            <property name="minimumSize">
+             <size>
+              <width>65</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>65</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>10</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="autoFillBackground">
+             <bool>false</bool>
+            </property>
+            <property name="text">
+             <string extracomment="Lower Latency, Higher Bandwidth">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;h.264&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="4">
+           <widget class="QFrame" name="frame_2">
+            <property name="minimumSize">
+             <size>
+              <width>155</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>155</width>
+              <height>16777215</height>
+             </size>
+            </property>
             <property name="frameShape">
              <enum>QFrame::StyledPanel</enum>
             </property>
             <property name="frameShadow">
              <enum>QFrame::Raised</enum>
             </property>
-            <layout class="QVBoxLayout" name="verticalLayout_6">
+            <layout class="QVBoxLayout" name="verticalLayout_5">
              <item>
-              <widget class="QLabel" name="sidebar_title_label_5">
-               <property name="sizePolicy">
-                <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-                 <horstretch>10</horstretch>
-                 <verstretch>0</verstretch>
-                </sizepolicy>
-               </property>
-               <property name="styleSheet">
-                <string notr="true">color: rgb(255, 255, 255);
-font: 8pt &quot;Open Sans Extrabold&quot;;
-font-size: 14px;</string>
-               </property>
-               <property name="text">
-                <string>h.264 NVIDIA NVENC</string>
-               </property>
-               <property name="alignment">
-                <set>Qt::AlignHCenter|Qt::AlignTop</set>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QLabel" name="sidebar_title_label_11">
-               <property name="sizePolicy">
-                <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
-                 <horstretch>10</horstretch>
-                 <verstretch>0</verstretch>
-                </sizepolicy>
-               </property>
-               <property name="styleSheet">
-                <string notr="true">color: rgb(255, 255, 255);
-font: 8pt &quot;Open Sans Bold&quot;;
-font-size: 14px;</string>
-               </property>
-               <property name="text">
-                <string>-up-to 4K resolution
--up-to 120 fps
--lower latency
--requires high bandwidth
--requires NVIDIA GPU</string>
-               </property>
-               <property name="alignment">
-                <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <layout class="QHBoxLayout" name="horizontalLayout_8">
+              <layout class="QHBoxLayout" name="horizontalLayout_7">
                <item>
                 <widget class="QPushButton" name="h264_NVENC_select_button">
                  <property name="font">
@@ -556,13 +582,25 @@ font-size: 14px;</string>
             </layout>
            </widget>
           </item>
-          <item row="0" column="0">
+          <item row="0" column="2">
            <widget class="QFrame" name="frame">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
               <horstretch>0</horstretch>
               <verstretch>1</verstretch>
              </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>155</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>155</width>
+              <height>16777215</height>
+             </size>
             </property>
             <property name="frameShape">
              <enum>QFrame::StyledPanel</enum>
@@ -571,52 +609,6 @@ font-size: 14px;</string>
              <enum>QFrame::Raised</enum>
             </property>
             <layout class="QVBoxLayout" name="verticalLayout_4">
-             <item>
-              <widget class="QLabel" name="sidebar_title_label_3">
-               <property name="sizePolicy">
-                <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-                 <horstretch>10</horstretch>
-                 <verstretch>0</verstretch>
-                </sizepolicy>
-               </property>
-               <property name="styleSheet">
-                <string notr="true">color: rgb(255, 255, 255);
-font: 8pt &quot;Open Sans Extrabold&quot;;
-font-size: 14px;</string>
-               </property>
-               <property name="text">
-                <string>h.264 CPU Encoder</string>
-               </property>
-               <property name="alignment">
-                <set>Qt::AlignHCenter|Qt::AlignTop</set>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QLabel" name="sidebar_title_label_9">
-               <property name="sizePolicy">
-                <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
-                 <horstretch>10</horstretch>
-                 <verstretch>0</verstretch>
-                </sizepolicy>
-               </property>
-               <property name="styleSheet">
-                <string notr="true">color: rgb(255, 255, 255);
-font: 8pt &quot;Open Sans Bold&quot;;
-font-size: 14px;</string>
-               </property>
-               <property name="text">
-                <string>-up-to 1080p resolution
--up-to 60 fps
--lower latency
--requires high bandwidth
--requires mid-range CPU</string>
-               </property>
-               <property name="alignment">
-                <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
-               </property>
-              </widget>
-             </item>
              <item>
               <layout class="QHBoxLayout" name="horizontalLayout_5">
                <item>
@@ -645,7 +637,7 @@ font-size: 14px;</string>
 }</string>
                  </property>
                  <property name="text">
-                  <string>Select</string>
+                  <string extracomment="Click to enable CPU Based x264 Encoding">Select</string>
                  </property>
                 </widget>
                </item>
@@ -676,63 +668,326 @@ font-size: 14px;</string>
             </layout>
            </widget>
           </item>
-          <item row="0" column="1">
-           <widget class="QFrame" name="frame_2">
+          <item row="0" column="3">
+           <widget class="Line" name="line_5">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="6">
+           <widget class="QFrame" name="frame_3">
+            <property name="minimumSize">
+             <size>
+              <width>155</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>155</width>
+              <height>16777215</height>
+             </size>
+            </property>
             <property name="frameShape">
              <enum>QFrame::StyledPanel</enum>
             </property>
             <property name="frameShadow">
              <enum>QFrame::Raised</enum>
             </property>
-            <layout class="QVBoxLayout" name="verticalLayout_5">
+            <layout class="QVBoxLayout" name="verticalLayout_6">
              <item>
-              <widget class="QLabel" name="sidebar_title_label_4">
-               <property name="sizePolicy">
-                <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-                 <horstretch>10</horstretch>
-                 <verstretch>0</verstretch>
-                </sizepolicy>
+              <layout class="QHBoxLayout" name="horizontalLayout_8">
+               <item>
+                <widget class="QPushButton" name="h264_AMD_select_button">
+                 <property name="enabled">
+                  <bool>true</bool>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <pointsize>-1</pointsize>
+                   <weight>50</weight>
+                   <italic>false</italic>
+                   <bold>false</bold>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">#h264_AMD_select_button {
+  background-color: #272640;
+  color: #FFFFFF;
+  font-size: 14px;
+  padding: 4px;
+  margin: 4px;
+  font: &quot;Open Sans&quot;;
+  border: none;
+}
+
+#h264_AMD_select_button:hover {
+  background-color: #006466;
+}</string>
+                 </property>
+                 <property name="text">
+                  <string>Select</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="h264_AMD_configure_button">
+                 <property name="enabled">
+                  <bool>true</bool>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">#h264_AMD_configure_button {
+  background-color: #272640;
+  color: #FFFFFF;
+  font-size: 14px;
+  padding: 4px;
+  margin: 4px;
+  font: &quot;Open Sans&quot;;
+  border: none;
+}
+
+#h264_AMD_configure_button:hover {
+  background-color: #006466;
+}</string>
+                 </property>
+                 <property name="text">
+                  <string>Configure</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="Line" name="line">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="5">
+           <widget class="Line" name="line_6">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="Line" name="line_11">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QGridLayout" name="gridLayout_3">
+          <item row="0" column="2">
+           <widget class="QLabel" name="label_10">
+            <property name="minimumSize">
+             <size>
+              <width>155</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>155</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>10</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;CPU&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="4">
+           <widget class="QLabel" name="label_11">
+            <property name="minimumSize">
+             <size>
+              <width>155</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>155</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>10</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;nVidia NVEnc&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="5">
+           <widget class="Line" name="line_9">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="3">
+           <widget class="Line" name="line_8">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="6">
+           <widget class="QLabel" name="label_12">
+            <property name="minimumSize">
+             <size>
+              <width>155</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>10</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;AMD AMF/VCE&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QFrame" name="verticalFrame">
+            <property name="minimumSize">
+             <size>
+              <width>65</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>65</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_10">
+             <item>
+              <widget class="QLabel" name="label_5">
+               <property name="maximumSize">
+                <size>
+                 <width>100</width>
+                 <height>16777215</height>
+                </size>
                </property>
-               <property name="styleSheet">
-                <string notr="true">color: rgb(255, 255, 255);
-font: 8pt &quot;Open Sans Extrabold&quot;;
-font-size: 14px;</string>
+               <property name="font">
+                <font>
+                 <pointsize>8</pointsize>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
                </property>
                <property name="text">
-                <string>h.265 CPU Encoder</string>
+                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;Encoder&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               </property>
+               <property name="scaledContents">
+                <bool>false</bool>
                </property>
                <property name="alignment">
-                <set>Qt::AlignHCenter|Qt::AlignTop</set>
+                <set>Qt::AlignCenter</set>
+               </property>
+               <property name="wordWrap">
+                <bool>false</bool>
                </property>
               </widget>
              </item>
+            </layout>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="Line" name="line_7">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="Line" name="line_10">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QGridLayout" name="gridLayout_2">
+          <property name="bottomMargin">
+           <number>1</number>
+          </property>
+          <property name="verticalSpacing">
+           <number>6</number>
+          </property>
+          <item row="0" column="1">
+           <widget class="Line" name="line_2">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="2">
+           <widget class="QFrame" name="frame_4">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>1</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>155</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>155</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_7">
              <item>
-              <widget class="QLabel" name="sidebar_title_label_10">
-               <property name="sizePolicy">
-                <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
-                 <horstretch>10</horstretch>
-                 <verstretch>0</verstretch>
-                </sizepolicy>
-               </property>
-               <property name="styleSheet">
-                <string notr="true">color: rgb(255, 255, 255);
-font: 8pt &quot;Open Sans Bold&quot;;
-font-size: 14px;</string>
-               </property>
-               <property name="text">
-                <string>-up-to 1080p resolution
--up-to 60 fps
--higher latency
--requires lower bandwidth
--requires high-end CPU</string>
-               </property>
-               <property name="alignment">
-                <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <layout class="QHBoxLayout" name="horizontalLayout_7">
+              <layout class="QHBoxLayout" name="horizontalLayout_9">
                <item>
                 <widget class="QPushButton" name="h265_CPU_select_button">
                  <property name="font">
@@ -759,7 +1014,7 @@ font-size: 14px;</string>
 }</string>
                  </property>
                  <property name="text">
-                  <string>Select</string>
+                  <string extracomment="Click to enable CPU Based x265 Encoding">Select</string>
                  </property>
                 </widget>
                </item>
@@ -790,132 +1045,20 @@ font-size: 14px;</string>
             </layout>
            </widget>
           </item>
-         </layout>
-        </item>
-        <item>
-         <layout class="QGridLayout" name="gridLayout_2">
-          <item row="0" column="0">
-           <widget class="QFrame" name="frame_4">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-              <horstretch>0</horstretch>
-              <verstretch>1</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="frameShape">
-             <enum>QFrame::StyledPanel</enum>
-            </property>
-            <property name="frameShadow">
-             <enum>QFrame::Raised</enum>
-            </property>
-            <layout class="QVBoxLayout" name="verticalLayout_7">
-             <item>
-              <widget class="QLabel" name="sidebar_title_label_6">
-               <property name="sizePolicy">
-                <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-                 <horstretch>10</horstretch>
-                 <verstretch>0</verstretch>
-                </sizepolicy>
-               </property>
-               <property name="styleSheet">
-                <string notr="true">color: rgb(255, 255, 255);
-font: 8pt &quot;Open Sans Extrabold&quot;;
-font-size: 14px;</string>
-               </property>
-               <property name="text">
-                <string>h.265 NVIDIA NVENC</string>
-               </property>
-               <property name="alignment">
-                <set>Qt::AlignHCenter|Qt::AlignTop</set>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QLabel" name="sidebar_title_label_12">
-               <property name="sizePolicy">
-                <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
-                 <horstretch>10</horstretch>
-                 <verstretch>0</verstretch>
-                </sizepolicy>
-               </property>
-               <property name="styleSheet">
-                <string notr="true">color: rgb(255, 255, 255);
-font: 8pt &quot;Open Sans Bold&quot;;
-font-size: 14px;</string>
-               </property>
-               <property name="text">
-                <string>-up-to 4K resolution
--up-to 120 fps
--higher latency
--requires lower bandwidth
--requires NVIDIA GPU</string>
-               </property>
-               <property name="alignment">
-                <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <layout class="QHBoxLayout" name="horizontalLayout_9">
-               <item>
-                <widget class="QPushButton" name="h265_NVENC_select_button">
-                 <property name="font">
-                  <font>
-                   <pointsize>-1</pointsize>
-                   <weight>50</weight>
-                   <italic>false</italic>
-                   <bold>false</bold>
-                  </font>
-                 </property>
-                 <property name="styleSheet">
-                  <string notr="true">#h265_NVENC_select_button {
-  background-color: #272640;
-  color: #FFFFFF;
-  font-size: 14px;
-  padding: 4px;
-  margin: 4px;
-  font: &quot;Open Sans&quot;;
-  border: none;
-}
-
-#h265_NVENC_select_button:hover {
-  background-color: #006466;
-}</string>
-                 </property>
-                 <property name="text">
-                  <string>Select</string>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="QPushButton" name="h265_NVENC_configure_button">
-                 <property name="styleSheet">
-                  <string notr="true">#h265_NVENC_configure_button {
-  background-color: #272640;
-  color: #FFFFFF;
-  font-size: 14px;
-  padding: 4px;
-  margin: 4px;
-  font: &quot;Open Sans&quot;;
-  border: none;
-}
-
-#h265_NVENC_configure_button:hover {
-  background-color: #006466;
-}</string>
-                 </property>
-                 <property name="text">
-                  <string>Configure</string>
-                 </property>
-                </widget>
-               </item>
-              </layout>
-             </item>
-            </layout>
-           </widget>
-          </item>
-          <item row="0" column="2">
+          <item row="0" column="6">
            <widget class="QFrame" name="frame_6">
+            <property name="minimumSize">
+             <size>
+              <width>155</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>155</width>
+              <height>16777215</height>
+             </size>
+            </property>
             <property name="frameShape">
              <enum>QFrame::StyledPanel</enum>
             </property>
@@ -923,52 +1066,6 @@ font-size: 14px;</string>
              <enum>QFrame::Raised</enum>
             </property>
             <layout class="QVBoxLayout" name="verticalLayout_9">
-             <item>
-              <widget class="QLabel" name="sidebar_title_label_8">
-               <property name="sizePolicy">
-                <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-                 <horstretch>10</horstretch>
-                 <verstretch>0</verstretch>
-                </sizepolicy>
-               </property>
-               <property name="styleSheet">
-                <string notr="true">color: rgb(255, 255, 255);
-font: 8pt &quot;Open Sans Extrabold&quot;;
-font-size: 14px;</string>
-               </property>
-               <property name="text">
-                <string>h.265 AMD VCE/AMF</string>
-               </property>
-               <property name="alignment">
-                <set>Qt::AlignHCenter|Qt::AlignTop</set>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QLabel" name="sidebar_title_label_14">
-               <property name="sizePolicy">
-                <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
-                 <horstretch>10</horstretch>
-                 <verstretch>0</verstretch>
-                </sizepolicy>
-               </property>
-               <property name="styleSheet">
-                <string notr="true">color: rgb(255, 255, 255);
-font: 8pt &quot;Open Sans Bold&quot;;
-font-size: 14px;</string>
-               </property>
-               <property name="text">
-                <string>-up-to 4K resolution
--up-to 120 fps
--higher latency
--requires lower bandwidth
--requires AMD GPU</string>
-               </property>
-               <property name="alignment">
-                <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
-               </property>
-              </widget>
-             </item>
              <item>
               <layout class="QHBoxLayout" name="horizontalLayout_11">
                <item>
@@ -1034,8 +1131,49 @@ font-size: 14px;</string>
             </layout>
            </widget>
           </item>
-          <item row="0" column="1">
+          <item row="0" column="0">
+           <widget class="QLabel" name="label_4">
+            <property name="minimumSize">
+             <size>
+              <width>65</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>65</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>10</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string extracomment="Higher Latency, Lower Bandwidth">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;h.265&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="4">
            <widget class="QFrame" name="frame_5">
+            <property name="minimumSize">
+             <size>
+              <width>155</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>155</width>
+              <height>16777215</height>
+             </size>
+            </property>
             <property name="frameShape">
              <enum>QFrame::StyledPanel</enum>
             </property>
@@ -1044,58 +1182,9 @@ font-size: 14px;</string>
             </property>
             <layout class="QVBoxLayout" name="verticalLayout_8">
              <item>
-              <widget class="QLabel" name="sidebar_title_label_7">
-               <property name="sizePolicy">
-                <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-                 <horstretch>10</horstretch>
-                 <verstretch>0</verstretch>
-                </sizepolicy>
-               </property>
-               <property name="styleSheet">
-                <string notr="true">color: rgb(255, 255, 255);
-font: 8pt &quot;Open Sans Extrabold&quot;;
-font-size: 14px;</string>
-               </property>
-               <property name="text">
-                <string>h.264 AMD VCE/AMF</string>
-               </property>
-               <property name="alignment">
-                <set>Qt::AlignHCenter|Qt::AlignTop</set>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QLabel" name="sidebar_title_label_13">
-               <property name="sizePolicy">
-                <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
-                 <horstretch>10</horstretch>
-                 <verstretch>0</verstretch>
-                </sizepolicy>
-               </property>
-               <property name="styleSheet">
-                <string notr="true">color: rgb(255, 255, 255);
-font: 8pt &quot;Open Sans Bold&quot;;
-font-size: 14px;</string>
-               </property>
-               <property name="text">
-                <string>-up-to 4K resolution
--up-to 120 fps
--lower latency
--requires high bandwidth
--requires AMD GPU</string>
-               </property>
-               <property name="alignment">
-                <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
-               </property>
-              </widget>
-             </item>
-             <item>
               <layout class="QHBoxLayout" name="horizontalLayout_10">
                <item>
-                <widget class="QPushButton" name="h264_AMD_select_button">
-                 <property name="enabled">
-                  <bool>true</bool>
-                 </property>
+                <widget class="QPushButton" name="h265_NVENC_select_button">
                  <property name="font">
                   <font>
                    <pointsize>-1</pointsize>
@@ -1105,7 +1194,7 @@ font-size: 14px;</string>
                   </font>
                  </property>
                  <property name="styleSheet">
-                  <string notr="true">#h264_AMD_select_button {
+                  <string notr="true">#h265_NVENC_select_button {
   background-color: #272640;
   color: #FFFFFF;
   font-size: 14px;
@@ -1115,7 +1204,7 @@ font-size: 14px;</string>
   border: none;
 }
 
-#h264_AMD_select_button:hover {
+#h265_NVENC_select_button:hover {
   background-color: #006466;
 }</string>
                  </property>
@@ -1125,12 +1214,9 @@ font-size: 14px;</string>
                 </widget>
                </item>
                <item>
-                <widget class="QPushButton" name="h264_AMD_configure_button">
-                 <property name="enabled">
-                  <bool>true</bool>
-                 </property>
+                <widget class="QPushButton" name="h265_NVENC_configure_button">
                  <property name="styleSheet">
-                  <string notr="true">#h264_AMD_configure_button {
+                  <string notr="true">#h265_NVENC_configure_button {
   background-color: #272640;
   color: #FFFFFF;
   font-size: 14px;
@@ -1140,7 +1226,7 @@ font-size: 14px;</string>
   border: none;
 }
 
-#h264_AMD_configure_button:hover {
+#h265_NVENC_configure_button:hover {
   background-color: #006466;
 }</string>
                  </property>
@@ -1152,6 +1238,20 @@ font-size: 14px;</string>
               </layout>
              </item>
             </layout>
+           </widget>
+          </item>
+          <item row="0" column="3">
+           <widget class="Line" name="line_3">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="5">
+           <widget class="Line" name="line_4">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
            </widget>
           </item>
          </layout>
@@ -1195,7 +1295,7 @@ font-size: 14px;</string>
 }</string>
             </property>
             <property name="text">
-             <string>Go Back</string>
+             <string>Return to Activity Log</string>
             </property>
             <property name="icon">
              <iconset resource="../openstreamapp.qrc">

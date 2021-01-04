@@ -38,5 +38,8 @@
         <file>assets/h265NVENC.conf</file>
         <file>assets/h264AMDAMF.conf</file>
         <file>assets/h265AMDAMF.conf</file>
+        <file>images/OPENSTREAM-LOGO-1-200x48.png</file>
+        <file alias="MAINICON">images/MAINICON.ico</file>
+        <file>qt5app.rc</file>
     </qresource>
 </RCC>

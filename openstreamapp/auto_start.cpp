@@ -14,7 +14,7 @@
 #include <QDir>
 #include <QProcess>
 
-char* AUTO_START_SHORTCUT_FILENAME = "\\OpenStreamApp - Shortcut.lnk";
+char AUTO_START_SHORTCUT_FILENAME[30] = "\\OpenStreamApp - Shortcut.lnk";
 
 void old_auto_start_remove() {
     // Valid file path name (file is there).
