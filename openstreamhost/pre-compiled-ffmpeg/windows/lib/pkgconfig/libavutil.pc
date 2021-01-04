@@ -1,0 +1,14 @@
+prefix=/d/work/LS3Solutions/FFmpeg/build_out
+exec_prefix=${prefix}
+libdir=/d/work/LS3Solutions/FFmpeg/build_out/lib
+includedir=/d/work/LS3Solutions/FFmpeg/build_out/include
+
+Name: libavutil
+Description: FFmpeg utility library
+Version: 56.61.100
+Requires: 
+Requires.private: 
+Conflicts:
+Libs: -L${libdir}  -lavutil 
+Libs.private: -lm -luser32 -lbcrypt
+Cflags: -I${includedir}

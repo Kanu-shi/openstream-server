@@ -1,0 +1,14 @@
+prefix=/d/work/LS3Solutions/FFmpeg/build_out
+exec_prefix=${prefix}
+libdir=/d/work/LS3Solutions/FFmpeg/build_out/lib
+includedir=/d/work/LS3Solutions/FFmpeg/build_out/include
+
+Name: libavdevice
+Description: FFmpeg device handling library
+Version: 58.11.103
+Requires: 
+Requires.private: libavfilter >= 7.90.100, libswscale >= 5.8.100, libpostproc >= 55.8.100, libavformat >= 58.64.100, libavcodec >= 58.113.100, libswresample >= 3.8.100, libavutil >= 56.61.100
+Conflicts:
+Libs: -L${libdir}  -lavdevice 
+Libs.private: -lpsapi -lole32 -lstrmiids -luuid -loleaut32 -lshlwapi -lgdi32 -lm -lvfw32 -LC:/msys64/mingw64/lib -lmingw32 -lSDL2main -lSDL2
+Cflags: -I${includedir}
